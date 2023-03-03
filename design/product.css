@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:500,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --main-text-color: #3c8067;
+  --secondary-text-color: #6c7289;
+
+  --background-color: #f2ebe3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  background: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.image {
+  background: url('../images/image-product-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.about-product {
+  height: auto;
+  margin: 1.5rem;
+  max-width: 300px;
+}
+
+.about-product .product {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  color: var(--secondary-text-color);
+}
+
+.about-product .name {
+  font-family: 'Fraunces', serif;
+  margin-top: 0.5rem;
+}
+
+.about-product .description {
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--secondary-text-color);
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+}
+
+.about-product .price {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-family: 'Fraunces', serif;
+  color: var(--main-text-color);
+}
+
+.discount {
+  position: relative;
+  bottom: 0.5rem;
+  left: 1rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: line-through;
+  color: var(--secondary-text-color);
+  font-style: normal;
+}
+
+.about-product .button {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 280px;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem;
+
+  color: white;
+  background: var(--main-text-color);
+
+  border-radius: 0.7rem;
+  border: none;
+}
+
+@media (min-width: 40rem) {
+  .container {
+    flex-direction: row;
+    height: auto;
+    width: 550px;
+  }
+  .image {
+    background: url('../images/image-product-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+  }
+  .about-product {
+    width: 50%;
+    max-width: 250px;
+  }
+}
