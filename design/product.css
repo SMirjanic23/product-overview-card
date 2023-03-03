@@ -94,12 +94,17 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   padding: 0.75rem;
+  cursor: pointer;
 
   color: white;
   background: var(--main-text-color);
 
   border-radius: 0.7rem;
   border: none;
+}
+
+.about-product .button:hover {
+  background: #2e6350;
 }
 
 @media (min-width: 40rem) {
